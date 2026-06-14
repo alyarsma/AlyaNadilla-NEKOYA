@@ -156,7 +156,7 @@
 
                         @if($penyewaan->status_pembayaran === 'pending')
                             <a href="{{ route('payment.show', $penyewaan->id) }}"
-                               class="block rounded-2xl bg-gradient-to-r from-cyan-400 to-pink-400 px-5 py-4 text-center font-black text-slate-950">
+                               class="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700">
                                 Lanjutkan Pembayaran
                             </a>
                         @endif
