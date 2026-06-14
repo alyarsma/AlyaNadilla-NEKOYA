@@ -42,6 +42,8 @@ Route::post('/cart/apply-voucher', [CartController::class, 'applyVoucher'])
 Route::post('/cart/remove-voucher', [CartController::class, 'removeVoucher'])
     ->name('cart.removeVoucher');
 
+Route::delete('/cart/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
 Route::post('/checkout/direct', [CartController::class, 'directCheckout'])
     ->name('checkout.direct');
 

@@ -181,4 +181,16 @@ public function removeVoucher()
 
     return back()->with('success', 'Voucher berhasil dihapus.');
 }
+
+public function remove($id)
+{
+    $cart = session()->get('cart', []);
+
+    if (isset($cart[$id])) {
+        unset($cart[$id]);
+        session()->put('cart', $cart);
+    }
+
+    return back()->with('success', 'Item berhasil dihapus');
+}
 }
