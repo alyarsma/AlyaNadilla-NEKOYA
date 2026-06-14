@@ -74,13 +74,22 @@
                         <label for="password" class="mb-2 block text-sm font-bold text-cyan-200">
                             Password
                         </label>
-                        <input id="password"
-                               type="password"
-                               name="password"
-                               required
-                               autocomplete="new-password"
-                               class="w-full rounded-2xl border border-cyan-500/20 bg-slate-900 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300"
-                               placeholder="Minimal 8 karakter">
+
+                        <div class="relative">
+                            <input id="password"
+                                   type="password"
+                                   name="password"
+                                   required
+                                   autocomplete="new-password"
+                                   class="w-full rounded-2xl border border-cyan-500/20 bg-slate-900 px-5 py-4 pr-14 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300"
+                                   placeholder="Minimal 8 karakter">
+
+                            <button type="button"
+                                    onclick="togglePassword('password')"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-cyan-300">
+                                👁️
+                            </button>
+                        </div>
 
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
@@ -89,13 +98,22 @@
                         <label for="password_confirmation" class="mb-2 block text-sm font-bold text-cyan-200">
                             Konfirmasi Password
                         </label>
-                        <input id="password_confirmation"
-                               type="password"
-                               name="password_confirmation"
-                               required
-                               autocomplete="new-password"
-                               class="w-full rounded-2xl border border-cyan-500/20 bg-slate-900 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300"
-                               placeholder="Ulangi password">
+
+                        <div class="relative">
+                            <input id="password_confirmation"
+                                   type="password"
+                                   name="password_confirmation"
+                                   required
+                                   autocomplete="new-password"
+                                   class="w-full rounded-2xl border border-cyan-500/20 bg-slate-900 px-5 py-4 pr-14 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300"
+                                   placeholder="Ulangi password">
+
+                            <button type="button"
+                                    onclick="togglePassword('password_confirmation')"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-cyan-300">
+                                👁️
+                            </button>
+                        </div>
 
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
@@ -115,4 +133,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+
+            if (input.type === 'password') {
+                input.type = 'text';
+            } else {
+                input.type = 'password';
+            }
+        }
+    </script>
 </x-guest-layout>
