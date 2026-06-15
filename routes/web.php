@@ -132,6 +132,8 @@ Route::get('/admin/profile', [AdminProfileController::class, 'show'])
 
 Route::post('/admin/profile', [AdminProfileController::class, 'update'])
     ->name('admin.profile.update');
+
+Route::get('/katalog/search', [CostumeController::class, 'search'])->name('katalog.search');
 });
 
 require __DIR__.'/auth.php';

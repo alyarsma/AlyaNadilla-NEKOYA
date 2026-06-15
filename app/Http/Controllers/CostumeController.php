@@ -102,4 +102,19 @@ public function liveSearch(Request $request)
 
     return response()->json($costumes);
 }
+
+public function search(Request $request)
+{
+    $query = $request->q;
+
+    $costumes = Costume::query()
+        ->when($query, function ($q) use ($query) {
+            $q->where('nama_kostum', 'like', "%{$query}%")
+              ->orWhere('kategori', 'like', "%{$query}%")
+              ->orWhere('ukuran', 'like', "%{$query}%");
+        })
+        ->get();
+
+    return response()->json($costumes);
+}
 }
