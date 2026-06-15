@@ -6,7 +6,6 @@
 
 <div class="mx-auto max-w-7xl">
 
-    <!-- SEARCH -->
     <div class="mb-10">
         <div class="relative mx-auto max-w-3xl">
 
@@ -27,13 +26,11 @@
 
     <div class="grid gap-8 lg:grid-cols-[300px_1fr]">
 
-        <!-- SIDEBAR FILTER -->
         <aside class="h-fit rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-xl backdrop-blur
                       dark:bg-slate-800/60 dark:border-slate-700">
 
             <h2 class="mb-6 text-lg font-bold">Filter</h2>
 
-            <!-- KATEGORI -->
             <div class="mb-6">
                 <p class="mb-3 font-semibold text-slate-500">Kategori</p>
 
@@ -45,7 +42,6 @@
                 </div>
             </div>
 
-            <!-- SIZE -->
             <div class="mb-6">
                 <p class="mb-3 font-semibold text-slate-500">Size</p>
 
@@ -69,7 +65,6 @@
 
         </aside>
 
-        <!-- GRID -->
         <main>
 
             <div id="kostumContainer"
@@ -120,7 +115,6 @@
 
             </div>
 
-            <!-- EMPTY -->
             <p id="emptyFilterMessage" class="mt-10 hidden text-center text-slate-500">
                 Tidak ada kostum yang cocok
             </p>
@@ -149,9 +143,6 @@ const emptyFilterMessage = document.getElementById('emptyFilterMessage');
 let timeout = null;
 
 
-/* =========================
-   AJAX SEARCH
-========================= */
 searchInput.addEventListener('input', function () {
 
     clearTimeout(timeout);
@@ -162,7 +153,7 @@ searchInput.addEventListener('input', function () {
 
         container.innerHTML = `
             <div class="col-span-full text-center py-10 text-slate-500">
-                🔄 Searching...
+                Searching...
             </div>
         `;
 
@@ -175,7 +166,7 @@ searchInput.addEventListener('input', function () {
                 if (data.length === 0) {
                     container.innerHTML = `
                         <div class="col-span-full text-center py-10 text-slate-500">
-                            😢 Data tidak ditemukan
+                            Data tidak ditemukan
                         </div>
                     `;
                     return;

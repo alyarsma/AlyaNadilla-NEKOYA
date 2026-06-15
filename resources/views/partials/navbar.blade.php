@@ -158,7 +158,6 @@
 
     <div class="flex items-center gap-4 md:hidden">
 
-      {{-- TOGGLE THEME MOBILE --}}
       <button id="theme-toggle-mobile" type="button"
               class="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500/40 bg-slate-100 text-slate-900 hover:bg-blue-100 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
         <span class="dark:hidden">🌙</span>
