@@ -38,13 +38,13 @@
             <div class="grid gap-6 md:grid-cols-2">
                 <div>
                     <label class="block text-sm font-medium text-slate-300">Kode Kostum</label>
-                    <input type="text" name="kode_costume" value="{{ old('kode_costume') }}" required
+                    <input type="text" name="kode_kostum" value="{{ old('kode_kostum') }}" required
                         class="mt-2 w-full rounded-xl border border-slate-700 bg-[#070b26] px-4 py-3 text-white outline-none focus:border-cyan-400">
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-slate-300">Nama Kostum</label>
-                    <input type="text" name="nama" value="{{ old('nama') }}" required
+                    <input type="text" name="nama_kostum" value="{{ old('nama_kostum') }}" required
                         class="mt-2 w-full rounded-xl border border-slate-700 bg-[#070b26] px-4 py-3 text-white outline-none focus:border-cyan-400">
                 </div>
 
@@ -52,10 +52,9 @@
                     <label class="block text-sm font-medium text-slate-300">Kategori</label>
                     <select name="kategori" required
                         class="mt-2 w-full rounded-xl border border-slate-700 bg-[#070b26] px-4 py-3 text-white outline-none focus:border-cyan-400">
-                        <option value="anime">Anime</option>
-                        <option value="vtuber">Vtuber</option>
-                        <option value="game">Game</option>
-                        <option value="traditional">Traditional</option>
+                        <option value="anime">anime</option>
+                        <option value="vtuber">vtuber</option>
+                        <option value="game">game</option>
                     </select>
                 </div>
 
