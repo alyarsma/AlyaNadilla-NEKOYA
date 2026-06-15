@@ -93,23 +93,19 @@
 
                         <option value="anime"
                             {{ old('kategori', $costume->kategori) == 'anime' ? 'selected' : '' }}>
-                            Anime
+                            anime
                         </option>
 
                         <option value="game"
                             {{ old('kategori', $costume->kategori) == 'game' ? 'selected' : '' }}>
-                            Game
+                            game
                         </option>
 
                         <option value="vtuber"
                             {{ old('kategori', $costume->kategori) == 'vtuber' ? 'selected' : '' }}>
-                            Vtuber
+                            vtuber
                         </option>
 
-                        <option value="movie"
-                            {{ old('kategori', $costume->kategori) == 'movie' ? 'selected' : '' }}>
-                            Movie
-                        </option>
                     </select>
                 </div>
 

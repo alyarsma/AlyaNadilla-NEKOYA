@@ -25,7 +25,7 @@ public function store(Request $request)
     $validated = $request->validate([
         'kode_kostum' => 'required|unique:costumes,kode_kostum',
         'nama_kostum' => 'required|min:3',
-        'kategori' => 'required|in:Anime,Game,Movie,Original',
+        'kategori' => 'required|in:anime,vtuber,game',
         'ukuran' => 'required|in:S,M,L,XL',
         'harga_sewa' => 'required|numeric|min:0',
         'stok' => 'required|integer|min:0',
@@ -62,10 +62,10 @@ public function update(Request $request, Costume $costume)
     $validated = $request->validate([
         'kode_kostum' => 'required',
         'nama_kostum' => 'required',
-        'kategori' => 'required',
+        'kategori' => 'required|in:anime,vtuber,game',
         'ukuran' => 'required',
-        'harga_sewa' => 'required|numeric',
-        'stok' => 'required|numeric',
+        'harga_sewa' => 'required',
+         'stok' => 'required',
         'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
     ]);
 
