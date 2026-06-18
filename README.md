@@ -1,58 +1,251 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# NEKOYA - Cosplay Rental
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-10-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Ready-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-## About Laravel
+Sistem NEKOYA Cosplay Rental adalah platform penyewaan kostum cosplay berbasis web yang digunakan untuk mengelola proses pemesanan, pembayaran, dan manajemen kostum secara digital.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Navigasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [NEKOYA - Cosplay Rental](#nekoya---cosplay-rental)
+  - [Navigasi](#navigasi)
+  - [Tautan Project](#tautan-project)
+  - [Tentang Project](#tentang-project)
+  - [Preview Singkat](#preview-singkat)
+  - [Fitur](#fitur)
+    - [Untuk Penyewa](#untuk-penyewa)
+    - [Untuk Admin](#untuk-admin)
+    - [Sistem](#sistem)
+  - [Status Project](#status-project)
+  - [Batasan](#batasan)
+  - [Tech Stack](#tech-stack)
+  - [Persyaratan](#persyaratan)
+  - [Instalasi](#instalasi)
+  - [Akun Demo](#akun-demo)
+  - [Struktur Database](#struktur-database)
+  - [Halaman Utama](#halaman-utama)
+  - [Penutup](#penutup)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tautan Project
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Website: NEKOYA Cosplay Rental
+- Laporan: Sistem Informasi
+- Demo: Video Presentasi
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## Tentang Project
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+NEKOYA dikembangkan untuk mempermudah proses penyewaan kostum cosplay dari sistem manual menjadi sistem berbasis web.
+
+Pengguna dapat melakukan pemesanan kostum, mengelola keranjang, dan melakukan pembayaran secara online. Admin dapat mengelola data kostum, transaksi, serta verifikasi pembayaran.
+
+---
+
+## Preview Singkat
+
+| Area | Fungsi |
+|------|--------|
+| Penyewa | Booking, checkout, pembayaran, riwayat |
+| Admin | Manajemen kostum, transaksi, verifikasi |
+| Sistem | Pengelolaan data terintegrasi |
+
+---
+
+## Fitur
+
+### Untuk Penyewa
+
+- Registrasi dan login
+- Melihat katalog kostum
+- Detail kostum
+- Keranjang penyewaan
+- Checkout pemesanan
+- Upload bukti pembayaran
+- Riwayat penyewaan
+- Pengaturan profil dan preferensi
+
+---
+
+### Untuk Admin
+
+- Dashboard admin
+- CRUD kostum dan kategori
+- Manajemen penyewaan
+- Verifikasi pembayaran
+- Update status penyewaan
+- Manajemen pengguna
+
+---
+
+### Sistem
+
+- Role admin dan user
+- Sistem keranjang dan checkout
+- Validasi stok kostum
+- Upload bukti pembayaran
+- Status transaksi terstruktur
+
+---
+
+## Status Project
+
+| Modul | Status |
+|-------|--------|
+| Authentication |  Aktif |
+| Katalog Kostum |  Aktif |
+| Keranjang |  Aktif |
+| Checkout |  Aktif |
+| Pembayaran |  Aktif |
+| Admin Panel |  Aktif |
+| Riwayat Penyewaan |  Aktif |
+
+---
+
+## Batasan
+
+- Tidak menggunakan payment gateway otomatis
+- Pembayaran masih manual (upload bukti transfer)
+- Tidak ada sistem pengiriman
+- Notifikasi belum real time
+
+---
+
+## Tech Stack
+
+| Layer | Teknologi |
+|-------|-----------|
+| Backend | Laravel 10 |
+| Frontend | Blade + Tailwind CSS |
+| UI | Alpine.js |
+| Database | MySQL |
+| Build Tool | Vite |
+| Authentication | Laravel Breeze |
+| Storage | Laravel Storage |
+| Deployment | Railway atau VPS |
+
+---
+
+## Persyaratan
+
+- PHP 8 atau lebih baru
+- Composer
+- Node.js dan npm
+- MySQL
+- Git
+
+---
+
+## Instalasi
+
+### 1. Clone Project
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/username/nekoya.git
+cd nekoya
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Install Dependency
 
-## Contributing
+```bash
+composer install
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Setup Environment
 
-## Code of Conduct
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Database Setup
 
-## Security Vulnerabilities
+Edit file `.env` dan sesuaikan konfigurasi database:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nekoya
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## License
+### 5. Migration dan Seeder
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php artisan migrate --seed
+php artisan storage:link
+```
+
+### 6. Jalankan Aplikasi
+
+```bash
+php artisan serve
+npm run dev
+```
+
+---
+
+## Akun Demo
+
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | admin | admin123 |
+| User | alli | 12345678 |
+
+---
+
+## Struktur Database
+
+**Tabel:**
+
+- users
+- categories
+- costumes
+- costume_images
+- carts
+- cart_items
+- orders
+- order_items
+- payments
+- user_addresses
+
+**Relasi:**
+
+```
+users       → orders
+users       → carts
+orders      → order_items
+orders      → payments
+costumes    → categories
+carts       → cart_items
+```
+
+---
+
+## Halaman Utama
+
+| Halaman | Keterangan |
+|---------|------------|
+| `/` | Home |
+| `/katalog` | Katalog kostum |
+| `/cart` | Keranjang |
+| `/checkout` | Checkout |
+| `/payment` | Pembayaran |
+| `/riwayat` | Riwayat penyewaan |
+| `/profile` | Profil user |
+| `/admin` | Dashboard admin |
+
+---
+
+## Penutup
+
+NEKOYA Cosplay Rental adalah sistem penyewaan kostum berbasis web untuk mempermudah proses pemesanan, pembayaran, dan pengelolaan kostum secara digital.
